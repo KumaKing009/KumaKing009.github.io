@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://www.gstatic.com/firebasejs/3.0.2/firebase.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <link href="firebase.css" rel="stylesheet" type="text/css">
+</head>
+<script>
+    function onButtonClick()
+    {
+        document.getElementById("pushMessage").innerHTML = "登録したくじら！"
+    };
+</script>
+<body>
+    <h1>鯨飲くんDB</h1>
+    <hr />
+    <div align="center">
+        <table border="0">
+            <tr>
+                <td align="right"><b> 店名：</b></td>
+                <td><input type="text" id="shopName" size="30" maxlength="100"></td>
+            </tr>
+            <tr>
+                <td align="right"><b> 評価(良、普通、邪悪)：</b></td>
+                <td><input type="text" id="evaluation" size="30" maxlength="2"></td>
+            </tr>
+            <tr>
+                <td align="right"><b> コメント</b></td>
+                <td><input type="text" id="comment" size="30" maxlength="150"></td>
+            </tr>
+        </table>
+    </div>
+    <hr />
+    <div class="wrapper">
+        <button id="btnChangeData" onclick="onButtonClick();">登録</button>
+    </div>
+    <hr />
+    <div id="pushMessage" class="geiinn"></div>
+</body>
+
+</html>
